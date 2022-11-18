@@ -1,8 +1,8 @@
-import {Component, OnInit} from '@angular/core';
-import {AuthService} from '@security/service/auth.service';
-import {ApiResponse} from '@shared/model';
-import {Credential, CredentialDto} from '@security/model';
-import {CredentialHelper} from '@security/helper';
+import { Component, OnInit } from '@angular/core';
+import {Credential, CredentialDto} from "@security/model";
+import {AuthService} from "@security/service/auth.service";
+import {ApiResponse} from "@shared/model";
+import {CredentialHelper} from "@security/helper";
 
 @Component({
   selector: 'app-dashboard',
