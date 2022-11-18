@@ -6,7 +6,7 @@ const routes: Routes = [
   {
     path: '',
     canActivate: [SecurityGuard],
-    loadChildren: () => import('./modules/dashboard/dashboard.module').then(m => m.DashboardModule)
+    loadChildren: () => import('./modules/private/private.module').then(m => m.PrivateModule)
   },
   {
     path: 'account',
