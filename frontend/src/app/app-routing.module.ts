@@ -11,7 +11,7 @@ const routes: Routes = [
   {
     path: 'account',
     canActivate: [PublicGuard],
-    loadChildren: () => import('./security/security.module').then(m => m.SecurityModule)
+    loadChildren: () => import('./modules/public/public.module').then(m => m.PublicModule)
   }
 ];
 
