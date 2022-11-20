@@ -14,13 +14,23 @@ export class SigninComponent implements OnInit {
   constructor(public auth: AuthService) {
   }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this.initForm();
+  }
+
+  initForm(): void {
+    this.signInForm = new FormGroup({
+      /*
+      username: new FormControl('', [Validators.required, Validators.email]),
+      password: new FormControl('', [Validators.required, Validators.minLength(5)])
+      */
+    });
   }
 
   signin() {
     const payload: SigninPayload = {
-      username: 'benoit.titeux@protonmail.com',
-      password: 'test2022'
+      username: (this.signInForm.value.username).toLowerCase(),
+      password: this.signInForm.value.password
     };
     this.auth.signin(payload).subscribe()
   }
