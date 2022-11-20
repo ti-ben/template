@@ -9,6 +9,7 @@ import {FormControl, FormGroup, Validators} from "@angular/forms";
   styleUrls: ['./signin.component.scss']
 })
 export class SigninComponent implements OnInit {
+  signInForm!: FormGroup;
 
   constructor(public auth: AuthService) {
   }
