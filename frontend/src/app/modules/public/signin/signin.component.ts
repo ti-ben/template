@@ -17,8 +17,8 @@ export class SigninComponent implements OnInit {
 
   signin() {
     const payload: SigninPayload = {
-      username: 'captain',
-      password: 'P@ssword'
+      username: 'benoit.titeux@protonmail.com',
+      password: 'test2022'
     };
     this.auth.signin(payload).subscribe()
   }
