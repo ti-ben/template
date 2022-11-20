@@ -1,9 +1,7 @@
-<p>dashboard works!</p>
-<button (click)="logout()">logout</button>
-
-<button (click)="me()">get my info</button>
-
-
-<div *ngIf="credential">
-  {{ 'username : ' + credential.username}}
+<app-header></app-header>
+<app-sidebar></app-sidebar>
+<div class="content-wrapper">
+  <app-breadcrumb></app-breadcrumb>
+  <router-outlet></router-outlet>
 </div>
+<app-footer></app-footer>
